@@ -1,4 +1,4 @@
-name: first_cpp
+name: cpp_first
 services:
   app:
     build:
