@@ -3,9 +3,9 @@ FROM gcc:13 AS builder
 
 WORKDIR /src
 COPY q.cpp ./
-RUN g++ -std=c++17 -O2 -Wall -o q q.cpp
+RUN g++ -std=c++17 -O2 -Wall -static -o q q.cpp
 
-# ── 2. fázis: futtatás (csak a bináris) ─────────────────────────
+# ── 2. fázis: futtatás ──────────────────────────────────────────
 FROM debian:bookworm-slim
 
 WORKDIR /app
